@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Registre — Sonsdelbarri</title>
+  <link rel="icon" type="image/png" href="img/LOGO1.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="img/LOGO1.png" alt="Logo Festival">
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Obrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="navMenu">
+        <li><a href="index.html#dates">Dates</a></li>
+        <li><a href="index.html#sponsors">Sponsors</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contacte.html">Contacte</a></li>
+        <li><a href="registre.html">Registre</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="subpage-hero">
+    <div class="subpage-hero-content">
+      <h1>Registre</h1>
+      <p>Assegura't el teu lloc a Sonsdelbarri!</p>
+    </div>
+  </section>
+
+  <section class="subpage-content">
+    <div class="registre-wrapper">
+
+      <div class="registre-form">
+        <h2>Formulari d'inscripció</h2>
+
+        <div class="form-group">
+          <label for="nom">Nom i cognoms</label>
+          <input type="text" id="nom" placeholder="El teu nom complet">
+        </div>
+
+        <div class="form-group">
+          <label for="email">Correu electrònic</label>
+          <input type="email" id="email" placeholder="correu@exemple.com">
+          <!-- Missatge d'error de validació de l'email -->
+          <span class="error-msg" id="emailError">El correu ha de tenir el format usuari@domini.ext</span>
+        </div>
+
+        <div class="form-group">
+          <label for="telefon">Telèfon (opcional)</label>
+          <input type="tel" id="telefon" placeholder="+34 600 000 000">
+        </div>
+
+        <div class="form-group">
+          <label for="password">Contrasenya</label>
+          <input type="password" id="password" placeholder="Crea una contrasenya">
+        </div>
+
+        <div class="form-group">
+          <label for="password2">Confirma la contrasenya</label>
+          <input type="password" id="password2" placeholder="Repeteix la contrasenya">
+          <!-- Missatge d'error quan les contrasenyes no coincideixen -->
+          <span class="error-msg" id="passError">Les contrasenyes no coincideixen</span>
+        </div>
+
+        <div class="form-group">
+          <label>Dies als quals vols assistir</label>
+          <div class="checkbox-group">
+            <label class="checkbox-label">
+              <input type="checkbox" value="dia1"> 25 maig — Rock
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" value="dia2"> 26 maig — Pop
+            </label>
+            <label class="checkbox-label">
+              <input type="checkbox" value="dia3"> 28 maig — Mix Experience
+            </label>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="comentaris">Comentaris o al·lèrgies alimentàries</label>
+          <textarea id="comentaris" rows="4" placeholder="Escriu aquí qualsevol informació addicional..."></textarea>
+        </div>
+
+        <button class="btn" id="btnRegistre">Confirma el registre</button>
+      </div>
+
+      <div class="registre-info">
+        <h2>Informació del festival</h2>
+        <div class="info-card">
+          <p><i class="fa-solid fa-calendar-days"></i> <strong>25, 26 i 28 de maig</strong></p>
+          <p><i class="fa-solid fa-clock"></i> <strong>A partir de les 19:00h</strong></p>
+          <p><i class="fa-solid fa-location-dot"></i> <strong>Lleida, Catalunya</strong></p>
+          <p><i class="fa-solid fa-music"></i> <strong>Rock · Pop · Mix Experience</strong></p>
+        </div>
+        <p class="registre-note">Les places són limitades. Un cop enviïs el formulari, rebràs un correu de confirmació amb tots els detalls.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-social">
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="footer-links">
+      <a href="termes.html">Termes i Condicions</a>
+      <span>|</span>
+      <a href="cookies.html">Política de Cookies</a>
+      <span>|</span>
+      <a href="privadesa.html">Política de Privadesa</a>
+    </div>
+    <div class="footer-sign">
+      <p>Web creada per Ares Casals</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Menú hamburger ──
+    var hamburger = document.getElementById('hamburger');
+    var navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', function() {
+      navMenu.classList.toggle('obert');
+    });
+
+    // ── Validació de l'email ──
+    // Comprova que l'email té el format: alguna_cosa@domini.extensió
+    function emailValid(valor) {
+      var regex = /^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/;
+      return regex.test(valor);
+    }
+
+    document.getElementById('btnRegistre').addEventListener('click', function() {
+      var emailInput = document.getElementById('email');
+      var emailError = document.getElementById('emailError');
+      var pass1 = document.getElementById('password');
+      var pass2 = document.getElementById('password2');
+      var passError = document.getElementById('passError');
+      var valid = true;
+
+      // Validació email
+      if (!emailValid(emailInput.value.trim())) {
+        emailInput.classList.add('error');
+        emailError.classList.add('visible');
+        valid = false;
+      } else {
+        emailInput.classList.remove('error');
+        emailError.classList.remove('visible');
+      }
+
+      // Validació contrasenyes: han de coincidir
+      if (pass1.value !== pass2.value || pass1.value === '') {
+        pass2.classList.add('error');
+        passError.classList.add('visible');
+        valid = false;
+      } else {
+        pass2.classList.remove('error');
+        passError.classList.remove('visible');
+      }
+
+      // Si tot és vàlid, enviem el formulari
+      if (valid) {
+        alert('Registre completat! Ens posarem en contacte amb tu aviat. 🎵');
+      }
+    });
+  </script>
+
+</body>
+</html>

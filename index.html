@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Festival</title>
+  <link rel="icon" type="image/png" href="img/LOGO1.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Modal de benvinguda (es mostra el primer cop que es visita la web) -->
+  <div class="modal-overlay" id="modalBenvinguda">
+    <div class="modal-box">
+      <h2>Benvinguts a Sonsdelbarri!</h2>
+      <p>Tres nits de música en directe, bon ambient i mojitos frescos. Descobreix l'experiència.</p>
+      <button class="btn" id="tancarModal">Entrar</button>
+    </div>
+  </div>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="img/LOGO1.png" alt="Logo Festival">
+      </a>
+      <!-- Botó hamburger per a mòbil -->
+      <button class="hamburger" id="hamburger" aria-label="Obrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="navMenu">
+        <li><a href="#dates">Dates</a></li>
+        <li><a href="#sponsors">Sponsors</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contacte.html">Contacte</a></li>
+        <li><a href="registre.html">Registre</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section id="inici" class="hero">
+    <div class="hero-content">
+      <h1>Benviguts a Sonsdebarri!</h1>
+      <p>Tres nits de música en directe, bon ambient i mojitos frescos. 
+        Jazz, pop, rock i molt més en un bar de barri on tothom es coneix.</p>
+      <a href="registre.html" class="btn">Registra't</a>
+    </div>
+  </section>
+
+  <section id="dates" class="dates">
+    <div class="dates-left">
+      <h2>Una experiència <em>inoblidable</em></h2>
+      <div class="dates-text">
+        <p>Sons de barri és un esdeveniment de tres dies on la música es converteix en una experiència viva i propera. Una proposta autèntica amb una gran varietat d'estils —des de jazz i pop fins a ritmes urbans, indie i altres sons sorprenents— pensada perquè cada persona trobi el seu moment i es deixi portar per l'ambient.</p>
+        <p>Tot passa en un bar de barri amb molta essència, on el caliu de la gent i la proximitat fan que tot sigui especial. Un espai familiar, amb bon ambient, on pots gaudir dels concerts mentre prens alguna cosa, com uns mojitos ben frescos o altres begudes que acompanyen la nit.</p>
+        <p>No t'ho pensis gaire: vine a Sons de barri, porta els teus amics i deixa't portar per la música. Viu-ho, comparteix-ho i forma part d'una experiència que no oblidaràs.🎵</p>
+      </div>
+    </div>
+    <div class="dates-slideshow">
+      <img src="img/slide1.jpg" alt="Imatge 1" class="slide active">
+      <img src="img/slide2.jpg" alt="Imatge 2" class="slide">
+      <img src="img/slide3.jpg" alt="Imatge 3" class="slide">
+    </div>
+  </section>
+
+  <section id="itinerari" class="itinerari">
+    <h2>Itinerari de l'Esdeveniment</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Hora</th>
+          <th>25 maig — Rock</th>
+          <th>26 maig — Pop</th>
+          <th>28 maig — Mix Experience</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>19:00 - 20:30</td>
+          <td>Extremoduro</td>
+          <td>Lady Gaga</td>
+          <td>Melendi</td>
+        </tr>
+        <tr>
+          <td>21:00 - 22:30</td>
+          <td>Marea</td>
+          <td>Bruno Mars</td>
+          <td>Prince</td>
+        </tr>
+        <tr>
+          <td>23:00 - 00:00</td>
+          <td>La Polla Records</td>
+          <td>Michael Jackson</td>
+          <td>Romeo Santos</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <!-- Secció sponsors amb flipcard -->
+  <section id="sponsors" class="sponsors">
+    <h2>Patrocinadors</h2>
+    <div class="sponsors-grid">
+
+      <div class="sponsor-card">
+        <div class="sponsor-card-inner">
+          <div class="sponsor-card-front">
+            <img src="img/sponsor1.jpg" alt="Sponsor 1">
+          </div>
+          <div class="sponsor-card-back">
+            <span>Diputació de Lleida</span>
+            <a href="https://www.diputaciolleida.cat/" target="_blank">Visita'ns</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sponsor-card">
+        <div class="sponsor-card-inner">
+          <div class="sponsor-card-front">
+            <img src="img/sponsor2.jpeg" alt="Sponsor 2">
+          </div>
+          <div class="sponsor-card-back">
+            <span>L'Interpret</span>
+            <a href="https://l-interpret.com/" target="_blank">Visita'ns</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sponsor-card">
+        <div class="sponsor-card-inner">
+          <div class="sponsor-card-front">
+            <img src="img/sponsor3.svg" alt="Sponsor 3">
+          </div>
+          <div class="sponsor-card-back">
+            <span>Coca-Cola</span>
+            <a href="https://www.coca-cola.com/es/es/" target="_blank">Visita'ns</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sponsor-card">
+        <div class="sponsor-card-inner">
+          <div class="sponsor-card-front">
+            <img src="img/sponsor4.png" alt="Sponsor 4">
+          </div>
+          <div class="sponsor-card-back">
+            <span>Negrita</span>
+            <a href="https://negrita.es/" target="_blank">Visita'ns</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sponsor-card">
+        <div class="sponsor-card-inner">
+          <div class="sponsor-card-front">
+            <img src="img/sponsor5.jpeg" alt="Sponsor 5">
+          </div>
+          <div class="sponsor-card-back">
+            <span>Bono Cultura Joven</span>
+            <a href="https://bonoculturajoven.gob.es/" target="_blank">Visita'ns</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sponsor-card">
+        <div class="sponsor-card-inner">
+          <div class="sponsor-card-front">
+            <img src="img/sponsor6.jpg" alt="Sponsor 6">
+          </div>
+          <div class="sponsor-card-back">
+            <span>Auditori Enric Granados</span>
+            <a href="https://auditorienricgranados.cat/" target="_blank">Visita'ns</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sponsor-card">
+        <div class="sponsor-card-inner">
+          <div class="sponsor-card-front">
+            <img src="img/sponsor7.png" alt="Sponsor 7">
+          </div>
+          <div class="sponsor-card-back">
+            <span>Mallorca Island Festival</span>
+            <a href="https://mallorcaislandfestival.com/" target="_blank">Visita'ns</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="sponsor-card">
+        <div class="sponsor-card-inner">
+          <div class="sponsor-card-front">
+            <img src="img/sponsor8.png" alt="Sponsor 8">
+          </div>
+          <div class="sponsor-card-back">
+            <span>FSTVLB</span>
+            <a href="https://fstvlb.com/es/" target="_blank">Visita'ns</a>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <a href="contacte.html" class="btn">Contacta'ns</a>
+  </section>
+
+  <footer>
+    <div class="footer-social">
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="footer-links">
+      <a href="termes.html">Termes i Condicions</a>
+      <span>|</span>
+      <a href="cookies.html">Política de Cookies</a>
+      <span>|</span>
+      <a href="privadesa.html">Política de Privadesa</a>
+    </div>
+    <div class="footer-sign">
+      <p>Web creada per Ares Casals</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Slideshow de la secció dates ──
+    var slides = document.querySelectorAll('.slide');
+    var current = 0;
+    setInterval(function() {
+      slides[current].classList.remove('active');
+      current = current + 1;
+      if (current >= slides.length) { current = 0; }
+      slides[current].classList.add('active');
+    }, 3500);
+
+    // ── Menú hamburger ──
+    // Quan es fa clic al botó hamburger, s'afegeix/treu la classe 'obert' al menú
+    var hamburger = document.getElementById('hamburger');
+    var navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', function() {
+      navMenu.classList.toggle('obert');
+    });
+
+    // ── Modal de benvinguda ──
+    // Es comprova si ja s'ha visitat la web amb localStorage
+    // Si no s'ha visitat mai, es mostra el modal
+    var modal = document.getElementById('modalBenvinguda');
+    if (!localStorage.getItem('visitat')) {
+      modal.classList.add('obert');
+    }
+    // Quan es fa clic al botó "Entrar", es tanca el modal i es guarda a localStorage
+    document.getElementById('tancarModal').addEventListener('click', function() {
+      modal.classList.remove('obert');
+      localStorage.setItem('visitat', 'true');
+    });
+  </script>
+
+</body>
+</html>

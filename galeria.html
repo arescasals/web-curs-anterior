@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Galeria — Sonsdelbarri</title>
+  <link rel="icon" type="image/png" href="img/LOGO1.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <!-- Lightbox per ampliar imatges en fer clic -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img src="" alt="Imatge ampliada" id="lightboxImg">
+  </div>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="img/LOGO1.png" alt="Logo Festival">
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Obrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="navMenu">
+        <li><a href="index.html#dates">Dates</a></li>
+        <li><a href="index.html#sponsors">Sponsors</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contacte.html">Contacte</a></li>
+        <li><a href="registre.html">Registre</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="subpage-hero">
+    <div class="subpage-hero-content">
+      <h1>Galeria</h1>
+      <p>Esdeveniments anteriors i moments destacats</p>
+    </div>
+  </section>
+
+  <section class="subpage-content">
+
+    <!-- Slider d'esdeveniments anteriors (5 imatges, CSS) -->
+    <h2 style="font-style:italic; color:#f5f0e8; font-size:28px; margin-bottom:24px;">Un pupurri d'esdeveniments anteriors</h2>
+    <div class="galeria-slider">
+      <img src="img/galeria1.webp" alt="Esdeveniment anterior 1" class="gslide active">
+      <img src="img/galeria2.webp" alt="Esdeveniment anterior 2" class="gslide">
+      <img src="img/galeria3.webp" alt="Esdeveniment anterior 3" class="gslide">
+      <img src="img/galeria4.webp" alt="Esdeveniment anterior 4" class="gslide">
+      <img src="img/galeria5.webp" alt="Esdeveniment anterior 5" class="gslide">
+    </div>
+
+    <!-- Graella 2x2 d'imatges de l'esdeveniment (JS: clic per ampliar) -->
+    <h2 style="font-style:italic; color:#f5f0e8; font-size:28px; margin-bottom:24px;">Propers esdevenimets. No te'ls perdis!</h2>
+    <div class="galeria-grid">
+      <img src="img/event1.webp" alt="Imatge de l'esdeveniment 1" onclick="obrirLightbox(this.src)">
+      <img src="img/event2.webp" alt="Imatge de l'esdeveniment 2" onclick="obrirLightbox(this.src)">
+      <img src="img/event3.webp" alt="Imatge de l'esdeveniment 3" onclick="obrirLightbox(this.src)">
+      <img src="img/event4.webp" alt="Imatge de l'esdeveniment 4" onclick="obrirLightbox(this.src)">
+    </div>
+
+  </section>
+
+  <footer>
+    <div class="footer-social">
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="footer-links">
+      <a href="termes.html">Termes i Condicions</a>
+      <span>|</span>
+      <a href="cookies.html">Política de Cookies</a>
+      <span>|</span>
+      <a href="privadesa.html">Política de Privadesa</a>
+    </div>
+    <div class="footer-sign">
+      <p>Web creada per Ares Casals</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Menú hamburger ──
+    var hamburger = document.getElementById('hamburger');
+    var navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', function() {
+      navMenu.classList.toggle('obert');
+    });
+
+    // ── Slider de la galeria ──
+    // Cada 3.5 segons canvia a la següent imatge afegint/traient la classe 'active'
+    var gslides = document.querySelectorAll('.gslide');
+    var gcurrent = 0;
+    setInterval(function() {
+      gslides[gcurrent].classList.remove('active');
+      gcurrent = gcurrent + 1;
+      if (gcurrent >= gslides.length) { gcurrent = 0; }
+      gslides[gcurrent].classList.add('active');
+    }, 3500);
+
+    // ── Lightbox ──
+    // En fer clic a una imatge de la graella, s'obre el lightbox amb la imatge ampliada
+    var lightbox = document.getElementById('lightbox');
+    var lightboxImg = document.getElementById('lightboxImg');
+
+    function obrirLightbox(src) {
+      lightboxImg.src = src;
+      lightbox.classList.add('obert');
+    }
+
+    // Tancar el lightbox en fer clic a la X o fora de la imatge
+    document.getElementById('lightboxClose').addEventListener('click', function() {
+      lightbox.classList.remove('obert');
+    });
+
+    lightbox.addEventListener('click', function(e) {
+      // Tancar si es fa clic al fons fosc (no a la imatge en si)
+      if (e.target === lightbox) {
+        lightbox.classList.remove('obert');
+      }
+    });
+  </script>
+
+</body>
+</html>

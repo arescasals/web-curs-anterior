@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — Sonsdelbarri</title>
+  <link rel="icon" type="image/png" href="img/LOGO1.png">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital@1&family=Lora&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a href="index.html" class="logo">
+        <img src="img/LOGO1.png" alt="Logo Festival">
+      </a>
+      <button class="hamburger" id="hamburger" aria-label="Obrir menú">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <ul id="navMenu">
+        <li><a href="index.html#dates">Dates</a></li>
+        <li><a href="index.html#sponsors">Sponsors</a></li>
+        <li><a href="faq.html">FAQ</a></li>
+        <li><a href="contacte.html">Contacte</a></li>
+        <li><a href="registre.html">Registre</a></li>
+        <li><a href="galeria.html">Galeria</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <section class="subpage-hero">
+    <div class="subpage-hero-content">
+      <h1>Preguntes Freqüents</h1>
+      <p>Tot el que necessites saber sobre Sonsdelbarri</p>
+    </div>
+  </section>
+
+  <section class="subpage-content">
+    <!-- Cada faq-item té dues cares: front (pregunta) i back (resposta) -->
+    <div class="faq-list">
+
+      <div class="faq-item">
+        <div class="faq-item-inner">
+          <div class="faq-front">
+            <h3>On es celebra el festival?</h3>
+          </div>
+          <div class="faq-back">
+            <p>Sonsdelbarri es celebra en un bar-pub de barri amb molta essència al centre de la ciutat. L'adreça exacta es comunicarà als assistents registrats.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-item-inner">
+          <div class="faq-front">
+            <h3>Quan és el festival?</h3>
+          </div>
+          <div class="faq-back">
+            <p>El festival té lloc els dies 25, 26 i 28 de maig. Cada dia comença a les 19:00h.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-item-inner">
+          <div class="faq-front">
+            <h3>Cal comprar entrada?</h3>
+          </div>
+          <div class="faq-back">
+            <p>Sí, cal registrar-se prèviament. Pots fer-ho a través del formulari de <a href="registre.html">Registre</a>.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-item-inner">
+          <div class="faq-front">
+            <h3>Hi ha límit d'aforament?</h3>
+          </div>
+          <div class="faq-back">
+            <p>Sí, les places són limitades per garantir una experiència propera i de qualitat. Et recomanem registrar-te com abans millor.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-item-inner">
+          <div class="faq-front">
+            <h3>Es pot assistir a un sol dia?</h3>
+          </div>
+          <div class="faq-back">
+            <p>Sí, pots triar assistir a un, dos o els tres dies del festival. Al formulari de registre podràs indicar quins dies t'interessen.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-item-inner">
+          <div class="faq-front">
+            <h3>Es poden retornar els tickets?</h3>
+          </div>
+          <div class="faq-back">
+            <p>Sí! S'accepten devolucions amb 3 dies d'antelació al dia del concert.</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="faq-item">
+        <div class="faq-item-inner">
+          <div class="faq-front">
+            <h3>Tinc més preguntes, com puc contactar?</h3>
+          </div>
+          <div class="faq-back">
+            <p>Pots escriure'ns a través del nostre <a href="contacte.html">formulari de contacte</a> i t'respondrem el més aviat possible.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <footer>
+    <div class="footer-social">
+      <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+      <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+      <a href="#"><i class="fa-brands fa-tiktok"></i></a>
+      <a href="#"><i class="fa-brands fa-youtube"></i></a>
+    </div>
+    <div class="footer-links">
+      <a href="termes.html">Termes i Condicions</a>
+      <span>|</span>
+      <a href="cookies.html">Política de Cookies</a>
+      <span>|</span>
+      <a href="privadesa.html">Política de Privadesa</a>
+    </div>
+    <div class="footer-sign">
+      <p>Web creada per Ares Casals</p>
+    </div>
+  </footer>
+
+  <script>
+    // ── Menú hamburger ──
+    var hamburger = document.getElementById('hamburger');
+    var navMenu = document.getElementById('navMenu');
+    hamburger.addEventListener('click', function() {
+      navMenu.classList.toggle('obert');
+    });
+  </script>
+
+</body>
+</html>
